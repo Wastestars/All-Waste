@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Recyclable extends Model
+class Pickup extends Model
 {
     use HasFactory;
-    protected $fillable = ['id','wasteName','wasteDescription','wasteImage','isDeleted'];
+    protected $fillable = ['id','pickupLocation','pickupDateTime','isDeleted'];
 
 }

@@ -8,23 +8,19 @@
 
 <h3 style="text-align:center;">View Pickup Times</h3>
 
-<form action="" method="post" name="form1">
     <table id="pickupView">
         <tr>
             <th>Pickup Location</th>
             <th>Pickup Date and Time</th>
-            <th>Client</th>
 
         </tr>
-{{--        @foreach( as )--}}
+        @foreach($pickupTimes as $pickupTime )
             <tr>
-                <td>Pickup Location</td>
-                <td>Pickup Location</td>
-                <td>Pickup Location</td>
+                <td>{{$pickupTime->pickupLocation}}</td>
+                <td>{{$pickupTime->pickupDateTime}}</td>
             </tr>
-{{--        @endforeach--}}
+        @endforeach
     </table>
-</form>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 <script src = "//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>

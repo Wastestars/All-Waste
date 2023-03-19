@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('recyclables', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('wasteName');
-            $table->string('wasteDescription');
-            $table->string('wasteImage');
-            $table->timestamps();
+        Schema::create('pickups', function (Blueprint $table) {
+             $table->increments('id');
+             $table->string('pickupLocation');
+             $table->dateTime('pickupDateTime');
+             $table->timestamps();
         });
     }
 
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('recyclables');
+        Schema::dropIfExists('pickups');
     }
 };

@@ -14,11 +14,14 @@
             <th>Waste Product Description</th>
             <th>Waste Product Image</th>
         </tr>
+        @foreach($wasteProducts as $wasteProduct)
         <tr>
-            <td>Pickup Location</td>
-            <td>Pickup Location</td>
-            <td>Pickup Location</td>
+            <td>{{$wasteProduct->wasteName}}</td>
+            <td>{{$wasteProduct->wasteName}}</td>
+            <td><img style="width: 100px" src = "{{asset($wasteProduct->wasteImage)}}"></td>
+
         </tr>
+        @endforeach
     </table>
 </form>
 </body>

@@ -12,6 +12,24 @@ class PickupController extends Controller
         return view('pickup/schedulePickup');
     }
     public function viewPickupTimes(){
-        return view('pickup/viewPickupTimes');
+        $pickupTimes = Pickup::all();
+        return view('pickup/viewPickupTimes',['pickupTimes'=>$pickupTimes]);
     }
+    public function store(Request $request)
+    {
+        $request->validate([
+            'pickupLocation'=> 'required',
+            'pickupDateTime'=> 'required',
+        ]);
+
+        $pickup = new Pickup([
+            "pickupLocation" => $request->get('pickupLocation'),
+            "pickupDateTime" => $request->get('pickupDateTime'),
+
+        ]);
+
+        $pickup->save();
+        return redirect('viewPickupTimes');
+    }
+
 }

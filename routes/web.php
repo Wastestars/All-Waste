@@ -39,10 +39,12 @@ Route::controller(PaymentsController::class)->group(function(){
 });
 Route::controller(RecyclableController::class)->group(function(){
     Route::get('/recyclable', 'index');
+    Route::post('/recyclable', 'store');
     Route::get('/viewRecyclable', 'viewRecyclable');
 });
 Route::controller(PickupController::class)->group(function(){
     Route::get('/schedulePickup', 'index');
+    Route::post('/schedulePickup', 'store');
     Route::get('/viewPickupTimes', 'viewPickupTimes');
 });
 

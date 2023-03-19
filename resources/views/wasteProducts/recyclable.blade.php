@@ -2,8 +2,8 @@
 <body>
 
 <div class="recyclableFrm">
-    <form action="" method="POST" enctype="multipart/form-data" class="form">
-
+    <form action="/recyclable" method="POST" enctype="multipart/form-data" class="form">
+    @csrf
         <h1 class="title">Post your recyclable waste products</h1>
 
         <br>
