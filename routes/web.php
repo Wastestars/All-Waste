@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PaymentsController;
+use App\Http\Controllers\RecyclableController;
+use App\Http\Controllers\PickupController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +37,12 @@ Route::controller(PaymentsController::class)->group(function(){
     Route::get('/myTransactions', 'myTransactions');
     Route::get('/viewAllPayments', 'viewAllPayments');
 });
+Route::controller(RecyclableController::class)->group(function(){
+    Route::get('/recyclable', 'index');
+    Route::get('/viewRecyclable', 'viewRecyclable');
+});
+Route::controller(PickupController::class)->group(function(){
+    Route::get('/schedulePickup', 'index');
+    Route::get('/viewPickupTimes', 'viewPickupTimes');
+});
+
