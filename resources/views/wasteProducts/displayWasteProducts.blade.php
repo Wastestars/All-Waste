@@ -60,6 +60,14 @@
                             <div class="portfolio-info">
                                 <h4><a href="portfolio-details.html" title="More Details">{{$waste->wasteName}}</a></h4>
                                 <p>{{$waste->wasteDescription}}</p>
+
+                                    <form action="{{url('/payments')}}" method="POST">
+                                        @csrf
+                                        <button>
+                                    Paypal Payment
+                                        </button>
+                                    </form>
+
                             </div>
                         </div>
                     </div><!-- End Portfolio Item -->
