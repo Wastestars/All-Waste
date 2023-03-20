@@ -8,11 +8,28 @@
 
     <table id="pickupView">
         <thead>
+<<<<<<< HEAD
+        <tr>
+=======
         
+>>>>>>> c3c6467b50a007122e6b5d55985f210dc4f89d41
             <th>Pickup ID No.</th>
             <th>Pickup Location</th>
             <th>Pickup Date</th>
             <th>Client</th>
+<<<<<<< HEAD
+        </tr>
+        </thead>
+        <tbody>
+        @foreach($pickupTimes as $pickupTime )
+            <tr>
+                <td>{{$pickupTime->id}}</td>
+                <td>{{$pickupTime->pickupLocation}}</td>
+                <td>{{$pickupTime->pickupDateTime}}</td>
+                <td>{{$pickupTime->users->firstName. ' '.$pickupTime-> users->lastName}}</td>
+            </tr>
+        @endforeach
+=======
 
         </thead>
         <tbody>
@@ -24,6 +41,7 @@
                     <td>{{$pickupTime->users->firstName. ' '.$pickupTime-> users->lastName}}</td>
                 </tr>
             @endforeach
+>>>>>>> c3c6467b50a007122e6b5d55985f210dc4f89d41
         </tbody>
     </table>
 </body>

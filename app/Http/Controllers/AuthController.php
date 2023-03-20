@@ -67,7 +67,7 @@ class AuthController extends Controller
         //Login user
         if(Auth::attempt($credentials)){
             return redirect('/schedulePickup')->with('message', 'Login successful');
-        }  
+        }
     }
 
     public static function getUserName($id){

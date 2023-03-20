@@ -9,19 +9,22 @@
 
 <form action="" method="post" name="form1">
     <table id="recyclableView">
+        <thead>
         <tr>
             <th>Waste Product Name</th>
             <th>Waste Product Description</th>
             <th>Waste Product Image</th>
         </tr>
+        </thead>
+        <tbody>
         @foreach($wasteProducts as $wasteProduct)
         <tr>
             <td>{{$wasteProduct->wasteName}}</td>
             <td>{{$wasteProduct->wasteName}}</td>
             <td><img style="width: 100px" src = "{{ URL::asset("/storage/app/public/wasteProducts/$wasteProduct->wasteImage")}}"></td>
-
         </tr>
         @endforeach
+        </tbody>
     </table>
 </form>
 </body>
