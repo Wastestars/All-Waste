@@ -10,14 +10,18 @@
 
     <table id="pickupView">
         <tr>
+            <th>Pickup ID No.</th>
             <th>Pickup Location</th>
             <th>Pickup Date and Time</th>
+            <th>Client</th>
 
         </tr>
         @foreach($pickupTimes as $pickupTime )
             <tr>
+                <td>{{$pickupTime->id}}</td>
                 <td>{{$pickupTime->pickupLocation}}</td>
                 <td>{{$pickupTime->pickupDateTime}}</td>
+                <td>{{$pickupTime->users->firstName. ' '.$pickupTime-> users->lastName}}</td>
             </tr>
         @endforeach
     </table>

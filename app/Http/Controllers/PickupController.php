@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\Pickup;
 
+use Auth;
+
 
 use Illuminate\Http\Request;
 
@@ -20,12 +22,13 @@ class PickupController extends Controller
         $request->validate([
             'pickupLocation'=> 'required',
             'pickupDateTime'=> 'required',
+            'user'=>'required',
         ]);
 
         $pickup = new Pickup([
             "pickupLocation" => $request->get('pickupLocation'),
             "pickupDateTime" => $request->get('pickupDateTime'),
-
+            "userID"=>Auth::user()->id,
         ]);
 
         $pickup->save();

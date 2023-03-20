@@ -40,6 +40,7 @@ Route::controller(PaymentsController::class)->group(function(){
 Route::controller(RecyclableController::class)->group(function(){
     Route::get('/recyclable', 'index');
     Route::post('/recyclable', 'store');
+     Route::get('/displayWasteProducts', 'displayWasteProducts');
     Route::get('/viewRecyclable', 'viewRecyclable');
 });
 Route::controller(PickupController::class)->group(function(){

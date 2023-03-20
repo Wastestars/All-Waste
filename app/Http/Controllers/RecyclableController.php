@@ -36,4 +36,7 @@ class RecyclableController extends Controller
         $wasteProducts->save();
         return redirect('viewRecyclable');
     }
+    public function displayWasteProducts(){
+        return view('wasteProducts/displayWasteProducts');
+    }
 }

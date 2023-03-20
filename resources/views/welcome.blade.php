@@ -25,16 +25,16 @@
     <link href="{{url('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="{{url('assets/css/main.css" rel="stylesheet">
+    <link href="{{url('assets/css/main.css')}} rel="stylesheet">
 
- 
-  
+
+
 </head>
 
 <body>
 
   <!-- ======= Header ======= -->
- 
+
 
   <header id="header" class="header d-flex align-items-center">
 
@@ -82,11 +82,11 @@
 
     <div class="icon-boxes position-relative">
       <div class="container position-relative">
-        
 
 
 
-        
+
+
       </div>
     </div>
 
@@ -103,7 +103,7 @@
         <div class="section-header">
           <h2>About Us</h2>
           <p>All Waste is a specialist Garbage removal & collection company handling both small-scale and large-scale rubbish clearance jobs, for the residents and businesses of Nairobi. We are entirely dedicated to collecting and responsibly disposing of your rubbish in a professional way.
-            The company has an environment friendly and fully self-contained cleaning unit that empties the garbage cans and cleans them ensuring that the work premises remains clean. Our focus is to provide professional & eco-friendly rubbish removal and collection service in Nairobi.      
+            The company has an environment friendly and fully self-contained cleaning unit that empties the garbage cans and cleans them ensuring that the work premises remains clean. Our focus is to provide professional & eco-friendly rubbish removal and collection service in Nairobi.
 
 
 
@@ -112,8 +112,9 @@
 
         <div class="row gy-4">
           <div class="col-lg-6">
-           
-            <img src="{{url('assets/img/waste1.jpg')}}" class="img-fluid rounded-4 mb-4" alt="">
+
+
+    <img src="{{ URL::asset('img/waste1.jpg') }}" class="img-fluid rounded-4 mb-4" alt="">
     <p>
         Our expert team is always on hand to help with all of your waste management needs. We can help with everything from generic waste collections to garden clearances, builders waste disposal or even an office clearance/commercial relocation.
     </p>

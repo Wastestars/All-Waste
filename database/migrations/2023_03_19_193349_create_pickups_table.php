@@ -17,6 +17,8 @@ return new class extends Migration
              $table->increments('id');
              $table->string('pickupLocation');
              $table->dateTime('pickupDateTime');
+             $table->integer('userID')->unsigned();
+             $table->foreign('userID')->references('id')->on('users');
              $table->timestamps();
         });
     }
