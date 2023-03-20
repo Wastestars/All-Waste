@@ -32,7 +32,7 @@ class PickupController extends Controller
         ]);
 
         $pickup->save();
-        return redirect('viewPickupTimes');
+        return redirect('/payments');
     }
 
 }

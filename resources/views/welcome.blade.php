@@ -51,7 +51,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#team">Testimonies</a></li>
           <li><a href="#portfolio">Waste Type</a></li>
-          <li><a href="login.php">Login</a></li>
+          <li><a href="{{URL::to('/login')}}">Login</a></li>
         </ul>
       </nav><!-- .navbar -->
 

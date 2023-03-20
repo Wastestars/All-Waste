@@ -13,7 +13,7 @@
 
         <br>
         <div class="button">
-            <input type="submit" name="payments" class="btn" value="Pay with Paypal">
+            <input style = "width: 50%" type="submit" name="payments" class="btn" value="Pay with Paypal">
         </div>  
     </form>
 </main>
