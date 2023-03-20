@@ -37,6 +37,7 @@ class RecyclableController extends Controller
         return redirect('viewRecyclable');
     }
     public function displayWasteProducts(){
-        return view('wasteProducts/displayWasteProducts');
+        $wastes = Recyclable::all();
+        return view('wasteProducts/displayWasteProducts',['wastes'=>$wastes]);
     }
 }

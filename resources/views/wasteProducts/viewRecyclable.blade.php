@@ -18,7 +18,7 @@
         <tr>
             <td>{{$wasteProduct->wasteName}}</td>
             <td>{{$wasteProduct->wasteName}}</td>
-            <td><img style="width: 100px" src = "{{asset($wasteProduct->wasteImage)}}"></td>
+            <td><img style="width: 100px" src = "{{ URL::asset("/storage/app/public/wasteProducts/$wasteProduct->wasteImage")}}"></td>
 
         </tr>
         @endforeach
